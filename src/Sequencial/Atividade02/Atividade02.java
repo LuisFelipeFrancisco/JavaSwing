@@ -1,4 +1,4 @@
-package Sequencial;
+package Sequencial.Atividade02;
 import javax.swing.JOptionPane;
 
 /* 
