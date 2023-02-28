@@ -1,9 +1,10 @@
+package Sequencial;
 import javax.swing.JOptionPane;
 
-/* Atividade
- * 1. Leia um nuemro real equivalente a polegadas e converta para centímetros (1 polegada = 2,54 cm)
+/* 
+ * 2. Leia um nuemro real equivalente a polegadas e converta para centímetros (1 polegada = 2,54 cm)
  */
-public class Atividade01 {
+public class Atividade02 {
     
     public static void main(String[] args) {
         double polegadas, centimetros;
