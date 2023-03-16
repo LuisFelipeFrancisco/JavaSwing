@@ -1,3 +1,5 @@
+package Atividade01;
+
 import javax.swing.JOptionPane;
 
 /*
@@ -8,7 +10,7 @@ import javax.swing.JOptionPane;
  */
 
 public class Aluno {
-    
+
     private String nome;
     private double media;
 
