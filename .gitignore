@@ -44,3 +44,4 @@ replay_pid*
 *.ser
 /.metadata/
 .settings/
+.idea
