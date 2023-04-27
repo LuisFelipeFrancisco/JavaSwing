@@ -1,3 +1,4 @@
+package Contrato;
 
 public class Contrato {
 	

@@ -1,3 +1,4 @@
+package Contrato;
 import javax.swing.JOptionPane;
 
 public class TesteContrato {

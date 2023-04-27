@@ -1,3 +1,4 @@
+package Contrato;
 
 public class Proprietario extends Pessoa{
 	
