@@ -7,11 +7,11 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 public class TestConexao {
-	
-public static void main(String[] args) {
-		
+
+	public static void main(String[] args) {
+
 		Connection con = new Conexao().conectar();
-		
+
 		if (con != null) {
 			try {
 				PreparedStatement ps;
@@ -23,7 +23,7 @@ public static void main(String[] args) {
 				con.close();
 				if (resultado != 0) {
 					JOptionPane.showMessageDialog(null, "Sucesso");
-					//Limpar campos
+					// Limpar campos
 				} else {
 					JOptionPane.showConfirmDialog(null, "Erro");
 				}
