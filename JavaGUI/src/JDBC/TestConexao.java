@@ -1,4 +1,4 @@
-package connection;
+package JDBC;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,11 +6,11 @@ import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
 
-public class testCon {
+public class TestConexao {
 	
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
-		Connection con = new connection().conectar();
+		Connection con = new Conexao().conectar();
 		
 		if (con != null) {
 			try {
@@ -31,7 +31,5 @@ public class testCon {
 				JOptionPane.showConfirmDialog(null, "");
 			}
 		}
-		
 	}
-	
 }

@@ -1,16 +1,16 @@
-package connection;
+package JDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class connection {
+public class Conexao {
 	
 	private final String bd;
 	private final String usuario;
 	private final String senha;
 	
-	public connection () {
+	public Conexao () {
 		this.bd = "escola";
 		this.usuario = "root";
 		this.senha= "";
@@ -25,5 +25,4 @@ public class connection {
 			return null;
 		}
 	}
-	
 }
