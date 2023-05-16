@@ -100,36 +100,20 @@ public class TelaLivros extends JFrame {
 		JButton btnGravar = new JButton("Gravar");
 		btnGravar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				Livro livro = new Livro();
+				
+				livro.setNome(txtNome.getText());
+				livro.setIssn(txtISSN.getText());
+				livro.setAutor(txtAutor.getText());
+				livro.setAno(Integer.parseInt(txtAno.getText()));
+				livro.setEditora(txtEditora.getText());
 
-				Connection con = new Conexao().conectar();
-
-				if (con != null) {
-					try {
-						PreparedStatement ps;
-						String sql = "insert into livros (nome, issn, autor, ano, editora) values (?,?,?,?,?)";
-						ps = con.prepareStatement(sql);
-						ps.setString(1, txtNome.getText());
-						ps.setString(2, txtISSN.getText());
-						ps.setString(3, txtAutor.getText());
-						ps.setInt(4, Integer.parseInt(txtAno.getText()));
-						ps.setString(5, txtEditora.getText());
-						int resultado = ps.executeUpdate();
-						con.close();
-						if (resultado != 0) {
-							JOptionPane.showMessageDialog(rootPane, "Sucesso");
-							txtNome.setText("");
-							txtISSN.setText("");
-							txtAutor.setText("");
-							txtAno.setText("");
-							txtEditora.setText("");
-						} else {
-							JOptionPane.showMessageDialog(rootPane, "Erro");
-						}
-					} catch (SQLException erro) {
-						JOptionPane.showMessageDialog(rootPane, erro);
-					}
+				if (livro.gravarLivro()){
+					JOptionPane.showMessageDialog(rootPane, "Livro gravado com sucesso!");
+				}else{
+					JOptionPane.showMessageDialog(rootPane, "Erro ao gravar livro!");
 				}
-
 			}
 		});
 		btnGravar.setBounds(172, 214, 89, 23);
